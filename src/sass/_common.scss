@@ -1,0 +1,102 @@
+.search-section {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.search-form-container {
+    position: fixed;
+    z-index: 100;
+    padding: 10px 20px;
+    width: 100%;
+
+    background-color: #23449f;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.search-form {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 420px;
+    width: 100%;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: outline 250ms linear;
+
+    &:focus-within {
+        outline: 3px solid #2196f3;
+    }
+
+    & input {
+        display: block;
+        padding: 10px;
+        height: 40px;
+        width: 100%;
+
+        border: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        outline: none;
+        box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+
+        color: rgb(48, 45, 45);
+
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        outline: none;
+
+        transition: color 250ms linear, background-color 250ms linear;
+
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+            background-color: #2196f3;
+        }
+    }
+}
+
+.icon-btn {
+    fill: currentColor;
+}
+
+.spinner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: 8px solid #5e96ce;
+    border-top-color: #c8cbd1;
+
+    animation: spin 750ms linear infinite;
+
+    &.is-hidden {
+        display: none;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
