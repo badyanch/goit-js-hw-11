@@ -4,11 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/modern-normalize/modern-normalize.css"
+    />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <section class="section-search">
+      <div class="section-search-container">
+        <form action="search-form" id="search-form">
+          <input
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+
+          <button type="submit">
+            <svg class="icon-btn" width="16" height="16">
+              <use href="./images/icon.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+      <div class="spinner spinner-js is-hidden"></div>
+      <div class="sentinel"></div>
+    </section>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
